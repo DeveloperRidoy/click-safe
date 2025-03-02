@@ -1,14 +1,15 @@
-import express from "express";
-import OpenAI from "openai";
-import dotenv from "dotenv";
-import axios from "axios";
-import * as cheerio from "cheerio";
-import puppeteer from "puppeteer";
+const express = require("express");
+const OpenAI = require("openai");
+const dotenv = require("dotenv");
+const axios = require("axios");
+const cheerio = require("cheerio");
+const puppeteer = require("puppeteer");
 
 // Load environment variables
 dotenv.config();
 
 const app = express();
+console.log("OpenAI API Key:", process.env.OPENAI);
 const openai = new OpenAI({ apiKey: process.env.OPENAI });
 
 app.use(express.json({ limit: "50mb" }));
