@@ -79,6 +79,11 @@ async function scrapeWithPuppeteer(url) {
   }
 }
 
+// Default route
+app.get("/", (req, res) => {
+  res.send("Welcome to Scam Scanner API");
+});
+
 // API Endpoint to analyze website legitimacy
 app.post("/analyze", async (req, res) => {
   try {
