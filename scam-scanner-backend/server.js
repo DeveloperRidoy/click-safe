@@ -9,7 +9,6 @@ const puppeteer = require("puppeteer");
 dotenv.config();
 
 const app = express();
-console.log("OpenAI API Key:", process.env.OPENAI);
 const openai = new OpenAI({ apiKey: process.env.OPENAI });
 
 app.use(express.json({ limit: "50mb" }));
